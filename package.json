@@ -1,0 +1,24 @@
+{
+  "name": "shortener",
+  "version": "0.0.1",
+  "description": "{ description }",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc --project ./__conf__/tsconfig.json",
+    "start:dev": "nodemon --config ./__conf__/nodemon.json",
+    "prettify": "prettier --config ./__conf__/prettierrc.json --write 'src/**/*.ts'",
+    "start": "node dist/main.js",
+    "lint": "tslint --config ./__conf__/tslint.json --project ./__conf__/tsconfig.json"
+  },
+  "keywords": [],
+  "author": "flowwishthebest",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^11.10.4",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333"
+  }
+}
