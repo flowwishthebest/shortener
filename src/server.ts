@@ -1,15 +1,11 @@
-import * as Express from 'express';
+const http = require('http');
 
-const app = Express();
+const server = http.createServer();
 
-const port = process.env.APP_PORT;
-
-app.get('/', (req, res) => {
-    res.status(200);
-    res.write('Hello, World!\n');
-    res.end();
+server.on('request', (req, res) => {
+    res.end('Hello, World!');
 });
 
-app.listen(port, () => {
-    console.log('The server running on http://localhost:' + port);
+server.listen(3001, () => {
+    console.log('The server running on http://localhost:3001');
 });

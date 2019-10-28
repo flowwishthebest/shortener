@@ -1,0 +1,8 @@
+.DS_Store
+.idea
+*.log
+*.env
+.version
+.alm/
+node_modules/
+coverage
