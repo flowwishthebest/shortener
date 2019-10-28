@@ -1,0 +1,8 @@
+# https://www.docker.com/blog/keep-nodejs-rockin-in-docker/
+version: "3"
+services:
+  shortaner:
+    build: ./
+    command: npm run start
+    ports:
+      - "9012:9012"

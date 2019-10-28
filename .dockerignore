@@ -1,0 +1,8 @@
+# What is docker ignore?
+# https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md
+node_modules/
+dist/
+npm-debug.log
+LICENSE
+README.md
+docker-*.*.yml
