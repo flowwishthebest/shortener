@@ -1,0 +1,23 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Url shortener app",
+    "description": "Example swagger",
+    "version": "0.0.1"
+  },
+  "host": "http://localhost:3001",
+  "basepath": "api/v1",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/links/{hash}": {
+      "get": {
+        "summary": "get original url by hash"
+      },
+      "post": {
+        "summary": "create hash for composite url"
+      }
+    }
+  }
+}
