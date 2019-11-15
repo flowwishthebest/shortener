@@ -1,34 +1,15 @@
 import * as Express from "express";
-import * as BodyParser from "body-parser";
-
-class ShortenUrl {
-    public readonly id: number;
-    public readonly sourceUrl: string;
-    public readonly shortUrl: string;
-    public readonly expiration: number;
-}
+import * as SwaggerUI from "swagger-ui-express";
+import * as SwaggerDocument from "../docs/swagger/v1/swagger.json";
 
 const app = Express();
 
-app.use(BodyParser());
+app.use("/docs/swagger/v1", SwaggerUI.serve, SwaggerUI.setup(SwaggerDocument));
 
-const linksStorage: ShortenUrl[] = [];
-
-app.post("/links", (req, res) => {
-    const link = req.body.source;
-
-    const existingUrl = linksStorage.find((l) => l.sourceUrl === link);
-
-    if (!existingUrl) {
-        res.status(201);
-        res.json({
-            data: {
-                hash: link + Math.random(),
-            },
-        });
-    } else {
-        throw new Error("Url already exists");
-    }
+app.get("api/v1/links", (req, res) => {
+    res.status(200);
+    res.write("Hello, World!");
+    res.end();
 });
 
 app.listen(3001, () => {
