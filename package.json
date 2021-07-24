@@ -11,9 +11,11 @@
     "start:dev": "nodemon --config ./nodemon.json",
     "start": "node dist/src/server.js",
     "lint": "tslint -p ./tsconfig.json -c ./tslint.json",
+    "lint:fix": "tslint --fix -p ./tsconfig.json -c ./tslint.json",
     "prettify": "prettier --config ./prettierrc.json --write '{src,__tests__}/**/*.ts'",
     "test": "jest -c ./jest.config.json",
-    "coverage": "cat ./coverage/lcov.info | coveralls"
+    "coverage": "cat ./coverage/lcov.info | coveralls",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "Ilya P. <togowiththeflow@gmail.com>",
