@@ -32,6 +32,8 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
     "@tsconfig/node16": "1.0.2",
     "@types/express": "4.17.13",
     "@types/jest": "26.0.24",
