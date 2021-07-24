@@ -1,4 +1,4 @@
-import * as Express from "express";
+import express from "express";
 import * as SwaggerUI from "swagger-ui-express";
 import * as SwaggerDocument from "../docs/swagger/v1/swagger.json";
 
@@ -13,15 +13,15 @@ interface IApplicationConstructorKwArgs {
 }
 
 class Application {
-    private readonly server: Express.Application;
+    private readonly server: express.Application;
     private readonly logger: ILogger;
     private readonly config: IConfig;
 
     constructor(kwargs?: IApplicationConstructorKwArgs) {
-        this.logger = kwargs.logger || new WinstonLogger();
-        this.config = kwargs.config || new EnvConfig();
+        this.logger = kwargs?.logger || new WinstonLogger();
+        this.config = kwargs?.config || new EnvConfig();
 
-        this.server = Express();
+        this.server = express();
 
         this.server.use(
             "/docs/swagger/v1",
