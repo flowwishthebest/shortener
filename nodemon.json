@@ -2,8 +2,7 @@
     "watch": ["src"],
     "ext": "ts",
     "verbose": false,
-    "exec": "npm run start",
     "events": {
-	    "restart": "npm run build && npm run prettify"
+	    "restart": "npm run build"
     }
 }

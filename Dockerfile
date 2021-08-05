@@ -1,6 +1,4 @@
-FROM node:12.10.0-alpine
-
-ENV APP_PORT 9012
+FROM mhart/alpine-node:16.4.2
 
 WORKDIR /app/
 
@@ -12,6 +10,6 @@ COPY ./ ./
 
 RUN npm run build
 
-EXPOSE 9012
+EXPOSE 8080 
 
 CMD ["npm", "run", "start"]
