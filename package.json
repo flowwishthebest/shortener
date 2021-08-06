@@ -13,11 +13,15 @@
     "lint": "eslint -c ./.eslintrc.json ./src/",
     "lint:fix": "eslint -c ./.eslintrc.json ./src/ --fix",
     "prettify": "prettier --config ./prettierrc.json --write '{src,__tests__}/**/*.ts'",
-    "test": "jest -c ./jest.config.json",
+    "test": "jest -c ./jest.config.json -w 1",
     "coverage": "cat ./coverage/lcov.info | coveralls",
     "prepare": "husky install"
   },
-  "keywords": ["url shortener", "url", "short"],
+  "keywords": [
+    "url shortener",
+    "url",
+    "short"
+  ],
   "author": "Ilya P. <togowiththeflow@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -30,7 +34,6 @@
     "@tsconfig/node16": "1.0.2",
     "@types/jest": "26.0.24",
     "@types/node": "16.4.1",
-    "@types/supertest": "2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
     "@typescript-eslint/parser": "^4.28.4",
     "coveralls": "3.1.1",
@@ -39,7 +42,6 @@
     "jest": "27.0.6",
     "nodemon": "2.0.12",
     "prettier": "2.3.2",
-    "supertest": "6.1.4",
     "ts-jest": "27.0.4",
     "typescript": "4.3.5"
   }
